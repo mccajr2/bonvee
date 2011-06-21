@@ -1,13 +1,25 @@
 .container {
   width: 710px;
+  background: #fff;
+  margin-top: 20px;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+  border-style:solid;
+  border-width:1px;
 }
 
 body {
-  background: #cff;
+  background-image: url('../images/oak.jpg');
+/*background-repeat:repeat-y;*/
+}
+
+.left {
+	float: left;
 }
 
 header {
-  padding-top: 20px;
+  height: 70px;
 }
 
 logo {
@@ -71,10 +83,10 @@ nav {
 	
 }
 
-nav {
+nav {  
   float: left;
   background-color: white;
-  padding: 0 0.7em;
+  padding: 1.5em 0.7em;
   white-space: nowrap;
 }
 
@@ -105,16 +117,19 @@ nav ul li a:hover {
 /* Sign up button */
 
 a.signup_button {
-  margin-left: auto;
+  margin-top: 10px;
+  margin-left: 60px;;
   margin-right: auto;
-  display: block;
+  display: inline-block;
   text-align: center;
   width: 190px;
-  color: #fff;
   background: #006400;
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
+  color: #fff; 
+  text-shadow: black 0.1em 0.1em 0.2em;
+vertical-align: middle
 }
 
 /* Round corners */
