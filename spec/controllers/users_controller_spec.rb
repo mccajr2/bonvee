@@ -86,6 +86,14 @@ describe UsersController do
         get :show, :id => @user
         response.should have_selector("td.main>img", :class => "gravatar")
       end
+      
+      it "should show the user's posts" do
+        p1 = Factory(:post, :user => @user, :content => "Foo bar", :posttype => "Woop")
+        p2 = Factory(:post, :user => @user, :content => "Baz quux", :posttype => "Skadoop")
+        get :show, :id => @user
+        response.should have_selector("span.content", :content => p1.content)
+        response.should have_selector("span.content", :content => p2.content)
+      end
   
   end
 

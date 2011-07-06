@@ -1,0 +1,18 @@
+<%= form_for @post do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+<!--><select name="user[role_id]">
+  <option value="">Please select</option>
+  <option value="1" selected="selected">Review</option>
+  <option value="2">Checkin</option>
+  <option value="3">Editor</option>
+</select>-->
+  <div class="field">
+  	<%= f.select :posttype, ['Review', 'Checkin', 'Note'] %>
+  </div>
+  <div class="field">
+	<%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

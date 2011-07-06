@@ -2,17 +2,17 @@
   <%= link_to logo, root_path %>
   <nav class="round">
     <ul>
-      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Home", root_path, :class => "tab" %></li>
       <% if signed_in? %>
-      <li><%= link_to "Users", users_path %></li>
-      <li><%= link_to "Profile", current_user %></li>
-      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+      <li><%= link_to "Users", users_path, :class => "tab" %></li>
+      <li><%= link_to "Profile", current_user, :class => "tab" %></li>
+      <li><%= link_to "Settings", edit_user_path(current_user), :class => "tab" %></li>
       <% end %>
-      <li><%= link_to "Help", help_path %></li>
+      <li><%= link_to "Help", help_path, :class => "tab" %></li>
       <% if signed_in? %>
-      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+      <li><%= link_to "Sign out", signout_path, :method => :delete, :class => "tab" %></li>
       <% else %>
-      <li><%= link_to "Sign in", signin_path %></li>
+      <li><%= link_to "Sign in", signin_path, :class => "tab" %></li>
       <% end %>
     </ul>
   </nav>

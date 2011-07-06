@@ -1,11 +1,28 @@
-<%= image_tag("whiskey.jpg", :alt => "Bonvee", :class=> "left") %>
+	
+	<% if signed_in? %>
+	  <table class="front" summary="For signed-in users">
+	    <tr>
+	      <td class="main">
+	        <h1 class="post">What's up?</h1>
+	        <%= render 'shared/post_form' %>
+			<%= render 'shared/feed' %>
+	      </td>
+	      <td class="sidebar round">
+	        <%= render 'shared/user_info' %>
+	      </td>
+	    </tr>
+	  </table>
+	<% else %>
+	
+	
+	<%= image_tag("whiskey.jpg", :alt => "Bonvee", :class=> "left") %>
 
-<p>
-Have we met? If so, login above. If not, welcome!
-</p>
-<p>
+	<p>
+	Have we met? If so, login above. If not, welcome!
+	</p>
+	<p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae ornare neque. Mauris mi ante, adipiscing ut ullamcorper eu, placerat non libero. Vivamus vel orci non ligula dapibus accumsan. Integer vel tellus et lacus laoreet euismod. Ut tincidunt mattis gravida. Sed odio nisl, malesuada quis gravida ut, varius in odio. Aliquam neque tellus, eleifend et tincidunt et, volutpat ac elit. 	
-</p>
-<h1>...it's time to live the good life.</h1>
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
-
+	</p>
+	<h1>...it's time to live the good life.</h1>
+	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<% end %>

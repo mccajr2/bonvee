@@ -1,5 +1,5 @@
 .container {
-  width: 710px;
+  width: 75em;
   background: #fff;
   margin-top: 20px;
   -moz-border-radius:    10px;
@@ -232,3 +232,80 @@ ul.users {
 .users li {
   list-style: none;
 }
+
+h1.post {
+  margin-bottom: 0.3em;
+}
+
+table.posts {
+  margin-top: 4em;
+}
+
+table.posts tr {
+  height: 70px;
+}
+
+table.posts tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.posts tr td.post {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.posts tr td.post span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+  position: absolute;
+}
+
+div.user_info span.posts {
+  font-size: 80%;
+}
+
+form.new_post {
+  margin-bottom: 2em;
+}
+
+form.new_post textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+
+li > a.tab {
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-color: rgba(17, 151, 204, 0.5) rgba(0, 0, 0, 0.07) -moz-use-text-color;
+border-left: 1px solid rgba(0, 0, 0, 0.07);
+border-right: 1px solid rgba(0, 0, 0, 0.07);
+border-style: solid solid none;
+border-width: 1px 1px 0;
+display: block;
+font-size: 108%;
+font-weight: bold;
+line-height: 39px;
+text-rendering: optimizelegibility;
+}
+
+.autocomplete-w1 { background:url(shadow.png) no-repeat bottom right; position:absolute; top:4px; left:3px; /* IE6 fix: */ _background:none; _top:1px; }
+.autocomplete-w2 { padding:0 6px 6px 0; }
+.autocomplete { width:300px; border:1px solid #999; background:#FFF; cursor:default; text-align:left; max-height:350px; overflow:auto; margin:-6px 6px 6px -6px; /* IE specific: */ _height:350px;  _margin:0px 6px 6px 0; overflow-x:hidden; }
+.autocomplete .selected { background:#F0F0F0; }
+.autocomplete div { padding:2px 5px; white-space:nowrap; }
+.autocomplete strong { font-weight:normal; color:#3399FF; }

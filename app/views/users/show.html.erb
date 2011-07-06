@@ -7,10 +7,17 @@
       </h1>
 	  <h2><%= @user.tagline %></h2>
 	  <h3><%= @user.location %></h3>
+	  <% unless @user.posts.empty? %>
+        <table class="posts" summary="User posts">
+          <%= render @posts %>
+        </table>
+        <%= will_paginate @posts %>
+      <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+	  <strong>Posts</strong> <%= @user.posts.count %>
     </td>
   </tr>
 </table>
