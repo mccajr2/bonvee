@@ -1,4 +1,6 @@
 Bonvee::Application.routes.draw do
+  get "items/new"
+
   resources :users do
     member do
       get :following, :followers

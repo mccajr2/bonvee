@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110707000109) do
+ActiveRecord::Schema.define(:version => 20110713024722) do
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.string   "source"
+    t.string   "item_type"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "content"
