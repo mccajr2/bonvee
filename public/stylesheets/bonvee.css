@@ -1,0 +1,119 @@
+/********
+*  Application
+*********/
+
+html, body {
+}
+
+body {
+	font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","georgia",serif;
+	/*background-image: url('../images/oak.jpg');  */
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none outside none;
+}
+
+/********
+*  Header
+*********/
+
+header {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+	background-color: rgba(255, 255, 255, 0.81);
+	-moz-user-select: none;
+}
+
+header > ul {
+	font-size: 13px;
+	height: 1em;
+}
+
+header img {
+	float:right;
+}
+
+header > ul > li {
+	float: left;
+	margin-right: 16px;
+	padding: 24px 0;
+	position: relative;
+}
+
+header a {
+	color: #373534;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.main {
+	margin: auto;
+	padding-right: 16px;
+	position: relative;
+	text-align:left;
+	width: 872px;
+}
+
+.container {
+	background-color: #FFFFFF;
+}
+
+/********
+*  Body
+*********/
+
+#userinfo {
+	height: 128px;
+	margin-bottom: -240px;
+	padding-top: 112px;
+}
+
+h4 {
+	border-top: 3px solid rgba(0, 0, 0, 0.1);
+	font-size: 24px;
+	padding: 16px 0;
+	text-transform: uppercase;
+}
+
+td.sidebar {
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+}
+
+/******
+* Forms
+*****/
+
+header > form {
+	vertical-align: baseline;
+}
+
+header > input {
+	-moz-border-radius: 4px 4px 4px 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+    margin-right: 5px;
+    padding: 3px;
+    width: 140px;
+}
+
+input {
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px;
+  	border-radius:         4px;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    font-family: 'Rokkitt',Helvetica !important;
+    font-size: 2em !important;
+    padding: 6px 5px 6px 38px !important;
+    width: 300px !important;
+}

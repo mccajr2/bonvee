@@ -1,19 +1,25 @@
 <header>
-  <%= link_to logo, root_path %>
-  <nav class="round">
-    <ul>
-      <li><%= link_to "Home", root_path, :class => "tab" %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Users", users_path, :class => "tab" %></li>
-      <li><%= link_to "Profile", current_user, :class => "tab" %></li>
-      <li><%= link_to "Settings", edit_user_path(current_user), :class => "tab" %></li>
-      <% end %>
-      <li><%= link_to "Help", help_path, :class => "tab" %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Sign out", signout_path, :method => :delete, :class => "tab" %></li>
-      <% else %>
-      <li><%= link_to "Sign in", signin_path, :class => "tab" %></li>
-      <% end %>
-    </ul>
-  </nav>
+	<ul class="main">
+		<%= link_to logo, root_path%>
+		<li><%= link_to "Home", root_path, :class => "tab" %></li>
+      	<% if signed_in? %>
+      	<li><%= link_to "Users", users_path, :class => "tab" %></li>
+      	<li><%= link_to "Profile", current_user, :class => "tab" %></li>
+      	<li><%= link_to "Settings", edit_user_path(current_user), :class => "tab" %></li>
+      	<% end %>
+      	<li><%= link_to "Help", help_path, :class => "tab" %></li>
+      	<% if signed_in? %>
+      	<li><%= link_to "Sign out", signout_path, :method => :delete, :class => "tab" %></li>
+      	<% else %>
+		<%= form_for(:session, :url => sessions_path) do |f| %>
+		    <!--<%= f.label :email %><br />-->
+		    <%= f.text_field :email, :class => "login_input" %>
+		    <!--<%= f.label :password %><br />-->
+		    <%= f.password_field :password %>
+		    <%= f.submit "Sign in" %>
+		<% end %>
+
+		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      	<% end %>
+	</ul>
 </header>
